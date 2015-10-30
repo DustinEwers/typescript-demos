@@ -1,0 +1,221 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/slides")
+</head>
+<body>
+    <div id="impress">
+        <div id="intro" class="step slide">
+            <h3>Taming the JavaScript Dragon <br />
+                &nbsp;with<br />TypeScript
+            </h3>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <p><strong>Dustin Ewers</strong></p>
+            <p>
+                Twitter: <strong>&#64;DustinJEwers</strong> <br />
+                Website: <strong>www.dustinewers.com</strong> <br />
+                LinkedIn: <strong>www.linkedin.com/in/dustinewers</strong>
+            </p>
+            <p>
+                Demo Code:
+                <strong>https://github.com/DustinEwers/typescript-demos</strong>
+            </p>
+        </div>
+        <div class="step slide" data-x="0" data-y="1000">
+            <h2>1995</h2>
+            <img src="~/Content/images/bill_gates.jpg" class="small" />
+            <ul>
+                <li>Windows 95</li>
+                <li>Toy Story</li>
+                <li>Gangsters Paradice</li>
+                <li>Ace of Base</li>
+                <li>Bill Clinton</li>
+            </ul>
+        </div>
+        <div class="step slide" data-x="1000" data-y="1000">
+            <h2>JavaScript: A History Lesson</h2>
+            <img src="~/Content/images/kludge_bike.jpg" class="small" />
+            <ul>
+                <li>Brendan Eich</li>
+                <li>10 days</li>
+                <li>Standardized in 1996</li>
+                <li>Purpose: Add dynamic elements to web pages</li>
+            </ul>
+        </div>
+        <div class="step slide" data-x="2000" data-y="1000">
+            <img src="~/Content/images/js_all_the_things.jpg" />
+            <br />
+            <ul>
+                <li>Microcontrollers: Johnny-Five</li>
+                <li>Servers: Node.js</li>
+                <li>Command line tools: npm, gulp, etc...</li>
+                <li>Desktop applications: Electron</li>
+            </ul>
+        </div>
+        <div class="step slide" data-x="3000" data-y="1000">
+            <h2>It's even on the web!</h2>
+            <img src="~/Content/images/best-javascript-frameworks.jpg" />
+        </div>
+        <div class="step slide" data-x="4000" data-y="1000">
+            <h3>JavaScript: Swiss Army Knife</h3>
+            <img src="~/Content/images/swiss_knife.jpg" />
+        </div>
+        <div class="step slide" data-x="5000" data-y="1000">
+            <h2>That's great, but...</h2>
+            <img src="~/Content/images/kludge_bike.jpg" />
+        </div>
+        <div class="step slide" data-x="6000" data-y="1000">
+            <h3>This is just a little disturbing...</h3>
+            <img src="~/Content/images/good_parts.jpg" />
+        </div>
+        <div class="step slide" data-x="0000" data-y="2000">
+            <h2>JS Fails</h2>
+            <ul>
+                <li>Weird Inheritance</li>
+                <li>No Module Support</li>
+                <li>Poor Typing</li>
+                <li>Horrible scoping</li>
+            </ul>
+        </div>
+        <div class="step slide" data-x="1000" data-y="2000">
+            <h3>So why do we use it?</h3>
+            <ul>
+                <li>Runs everywhere</li>
+                <li>Smart People</li>
+                <li>Amazing Frameworks</li>
+            </ul>
+        </div>
+        <div class="step slide" data-x="2000" data-y="2000">
+            <h3>Escaping the Fail</h3>
+            <ul>
+                <li>ES6</li>
+                <li>Languages that Comile to JS</li>
+            </ul>
+        </div>
+        <div class="step slide" data-x="3000" data-y="2000">
+            <h3>ES6</h3>
+            <ul>
+                <li>Fixes JS Issues: modules, classes, scoped variables</li>
+                <li>Adds tasty syntatic sugar: arrow functions, string interpolation</li>
+                <li>Transpilation: Babel, Traceur</li>
+            </ul>
+        </div>
+        <div class="step slide" data-x="4000" data-y="2000">
+            <h3>Compile down to JS</h3>
+            <ul>
+                <li><a href="https://github.com/jashkenas/coffeescript/wiki/List-of-languages-that-compile-to-JS" target="_blank">200+ languages</a></li>
+                <li>Includes: Dart, CoffeeScript, etc...</li>
+            </ul>
+        </div>
+        <div class="step slide" data-x="0000" data-y="3000">
+            <img src="~/Content/images/tslogo.png" />
+            <ul>
+                <li>Kinda in the middle</li>
+                <li>Superset of JS</li>
+                <li>ES6/ES7 Features</li>
+                <li>Static Typing</li>
+            </ul>
+        </div>
+        <div class="step slide" data-x="1000" data-y="3000">
+            <h2>TypeScript: A brief history</h2>
+            <ul>
+                <li>Invented by Microsoft</li>
+                <li>Released in 2012 (after two years, not 10 days)</li>
+                <li>Anders Hejlsburg (Pascal/Borland, C#)</li>
+                <li>Open Source</li>
+                <li>Goal: To make large JS projects easier.</li>
+            </ul>
+        </div>
+        <div class="step slide" data-x="2000" data-y="3000">
+            <h2>Why TypeScript?</h2>
+            <ul>
+                <li>Static Typing = Good Tooling</li>
+                <li>Latest JS Features</li>
+                <li>Great Visual Studio (and VSCode) support</li>
+            </ul>
+        </div>
+        <div class="step slide" data-x="3000" data-y="3000">
+            <h3>How does it stack up?</h3>
+            <img src="~/Content/images/haters.jpg" />
+            <a href="http://kangax.github.io/compat-table/es6/" target="_blank">ES6 Comparison</a>
+        </div>
+        <div class="step slide" data-x="4000" data-y="3000">
+            <h2>Who uses it?</h2>
+            <ul>
+                <li>Microsoft: Azure Dashboard (several 100k loc app)</li>
+                <li>Asana</li>
+                <li>Google: Angular 2.0</li>
+                <li>Used to power Intellisense in VSCode and Visual Studio</li>
+            </ul>
+        </div>
+        <div class="step slide" data-x="0000" data-y="4000">
+            <h3>How do I get started?</h3>
+            <p>
+                <a href="http://www.typescriptlang.org/Playground" target="_blank">TypeScript Playground</a>
+            </p>
+            <p>
+                <a href="http://www.typescriptlang.org/Handbook" target="_blank">typescriptlang.org</a>
+            </p>
+        </div>
+        <div class="step slide" data-x="1000" data-y="4000">
+            <h3>What about tooling?</h3>
+            <h4>Compilation</h4>
+            <ul>
+                <li>Visual Studio</li>
+                <li>tsc (TypeScript compiler)</li>
+                <li>gulp-typescript</li>
+            </ul>
+        </div>
+        <div class="step slide" data-x="2000" data-y="4000">
+            <h3>What about tooling?</h3>
+            <h4>TypeScript Helpers</h4>
+            <ul>
+                <li>tslint - like jslint</li>
+                <li>tsd - package manager for ts.d files</li>
+                <li>tsconfig.json - project files for TypeScript</li>
+            </ul>
+        </div>
+        <div id="final" class="step slide" data-x="0" data-y="6000">
+            <h3>Major Takeaways</h3>
+            <ul>
+                <li>1. UI/UX is complex</li>
+                <li>2. ASP.NET MVC has a tons of tools to automate that complexity</li>
+                <li>3. ASP.NET MVC 6 has even more tools</li>
+            </ul>
+            <br />
+            <br />
+            <br />
+            <h4>Contact Info:</h4>
+            <p>
+                Twitter: <strong>&#64;DustinJEwers</strong> <br />
+                Website: <strong>www.dustinewers.com</strong> <br />
+                LinkedIn: <strong>www.linkedin.com/in/dustinewers</strong>
+            </p>
+            <p>
+                Demo Code:
+                <strong>github.com/DustinEwers/dot-net-mvc-ui-demos</strong>
+            </p>
+        </div>
+    </div>
+
+    @Scripts.Render("~/bundles/impress")
+
+    <script type="text/javascript">
+        impress().init();
+
+    </script>
+
+</body>
+</html>
