@@ -1,5 +1,77 @@
 ﻿@{
-    ViewBag.Title = "Contact";
+    ViewBag.Title = "Space Ninjas";
 }
 
+<div class="jumbotron">
+    <h1>Space Ninjas!</h1>
+    <p class="lead">A very simple web based text game, kinda like Kingdom of Lothing</p>
+    <button id="startNewGame" type="button" class="btn btn-default">Start Playing!</button>
+</div>
+<div class="row">
+    <div class="col-md-8">
+        <div id="characterCreation" style="display:none">
+            <h3>Character Creation:</h3>
+            <form id="charCreation">
+                <div class="form-group">
+                    <label for="characterName">Name</label>
+                    <input type="text" class="form-control" id="characterName" placeholder="Eg. Bob, Sally">
+                </div>
+                <div class="form-group">
+                    <label for="characterWeapon">Weapon</label>
+                    <select id="characterWeapon" class="form-control">
+                        <option value="sword">Sword</option>
+                        <option value="ninja-star">Ninja Star</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        </div>
+        <div id="homeBase" style="display:none">
+            <h3>Home Base</h3>
+            <p id="homeBaseDescription">
 
+            </p>
+            <button id="homeBaseRest" type="button" class="btn btn-default">Take a Nap</button>
+            <button id="homeBaseFight" type="button" class="btn btn-default">Fight a Monster</button>
+        </div>
+        <div id="monsterFight" style="display:none">
+            <h3>Fight!!!</h3>
+            <p id="monsterAction">
+
+            </p>
+            <p>
+                <span class="control-label">Monster Name: </span>
+                <span id="monsterName"></span>
+            </p>
+            <p>
+                <span class="control-label">Monster Health: </span>
+                <span id="monsterHealth"></span>
+            </p>
+            <button id="monsterContinueFight" type="button" class="btn btn-default">Attack</button>
+            <button id="monsterRunAway" type="button" class="btn btn-default">Run Away</button>
+        </div>
+    </div>
+    <div id="heroStats" class="col-md-4" style="display:none">
+        <h3>Hero Stats</h3>
+        <p>
+            <span class="control-label">Name: </span>
+            <span id="name"></span>
+        </p>
+        <p>
+            <span class="control-label">Health: </span>
+            <span id="health"></span>
+        </p>
+        <p>
+            <span class="control-label">Monsters killed: </span>
+            <span id="monstersKilled"></span>
+        </p>
+        <p>
+            <span class="control-label">Cash Money: </span>
+            <span id="money"></span>
+        </p>
+    </div>
+</div>
+
+@section scripts{
+    @Scripts.Render("~/bundles/game")
+}

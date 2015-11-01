@@ -31,6 +31,12 @@ namespace tsDemo
 
             bundles.Add(new ScriptBundle("~/Content/slides").Include(
                     "~/Content/slides.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/game").Include(
+                    "~/Scripts/game/characters.js",
+                    "~/Scripts/game/weapons.js",
+                    "~/Scripts/game/encounters.js",
+                    "~/Scripts/game/game.js"));
         }
     }
 }

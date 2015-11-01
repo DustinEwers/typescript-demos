@@ -1,0 +1,22 @@
+﻿module Game {
+    function getRandomRange(min:number, max:number):number {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    export class MonsterFactory {
+        static getMonster(): Monster {
+            var rand = Math.floor(Math.random() * 3);
+            switch (rand) {
+                case 0:
+                    return new Monster("Womp Rat", () => getRandomRange(1, 5), new Claws(() => getRandomRange(2, 4)));
+                    break;
+                case 1:
+                    return new Monster("Space Bat", () => getRandomRange(1, 3), new Claws(() => 1));
+                    break;
+                case 2:
+                    return new Monster("Rival Ninja", () => getRandomRange(3, 10), new Sword("Rusty Sword", "Not the best, really", SwordQuality.Janky));
+                    break;
+            }
+        }
+    }
+}
