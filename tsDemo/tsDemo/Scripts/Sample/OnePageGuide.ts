@@ -103,7 +103,7 @@ module StringValidation {
     var numberRegexp = /^[0-9]+$/;
     var anRegexp = /^[A-Za-z0-9]+$/;
 
-    export class LettersOnlyValidator implements StringValidator {
+    export class LettersOnlyValidation implements StringValidator {
         isAcceptable(s: string) {
             return lettersRegexp.test(s);
         }
@@ -123,7 +123,7 @@ module StringValidation {
 var strings = ['Hello', '98052', '101', "!@#!@#"];
 // Validators to use
 var validators: { [s: string]: StringValidation.StringValidator; } = {};
-validators['Letters only'] = new StringValidation.LettersOnlyValidator();
+validators['Letters only'] = new StringValidation.LettersOnlyValidation();
 
 //validators['ZIP code'] = new StringValidation.ZipCodeValidator(); // Can't use this because it's not exported
 

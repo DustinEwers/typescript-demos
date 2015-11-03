@@ -72,15 +72,15 @@ var StringValidation;
     var lettersRegexp = /^[A-Za-z]+$/;
     var numberRegexp = /^[0-9]+$/;
     var anRegexp = /^[A-Za-z0-9]+$/;
-    var LettersOnlyValidator = (function () {
-        function LettersOnlyValidator() {
+    var LettersOnlyValidation = (function () {
+        function LettersOnlyValidation() {
         }
-        LettersOnlyValidator.prototype.isAcceptable = function (s) {
+        LettersOnlyValidation.prototype.isAcceptable = function (s) {
             return lettersRegexp.test(s);
         };
-        return LettersOnlyValidator;
+        return LettersOnlyValidation;
     })();
-    StringValidation.LettersOnlyValidator = LettersOnlyValidator;
+    StringValidation.LettersOnlyValidation = LettersOnlyValidation;
     var ZipCodeValidator = (function () {
         function ZipCodeValidator() {
         }
@@ -96,7 +96,7 @@ var StringValidation;
 })(StringValidation || (StringValidation = {}));
 var strings = ['Hello', '98052', '101', "!@#!@#"];
 var validators = {};
-validators['Letters only'] = new StringValidation.LettersOnlyValidator();
+validators['Letters only'] = new StringValidation.LettersOnlyValidation();
 strings.forEach(function (s) {
     for (var name in validators) {
         console.log('"' + s + '" ' + (validators[name].isAcceptable(s) ? ' matches ' : ' does not match ') + name);

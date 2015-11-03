@@ -20,10 +20,10 @@ function makeCharacter() {
             hero.weapon = new Game.Sword("Generic Samaurai Sword", "A Generic Samaurai Sword", Game.SwordQuality.Decent);
             break;
         case "ninja-star":
-            hero.weapon = new Game.NinjaStar("Ninja Stars", "Ninja Stars", 1);
+            hero.weapon = new Game.NinjaStar("Ninja Stars", "They're quite pointy...", 1);
             break;
         default:
-            hero.weapon = new Game.Sword("Vorpal Samaurai Sword", "A vorpal Samaurai Sword", Game.SwordQuality.Awesome);
+            hero.weapon = new Game.Sword("Vorpal Samaurai Sword", "A vorpal Samaurai Sword. It silently goes snicker-snack!", Game.SwordQuality.Awesome);
             break;
     }
     updateHeroStats();
@@ -71,7 +71,7 @@ function continueMonsterFight() {
 function leaveMonsterFight() {
     hideAllPanels();
     $("#homeBase").show();
-    $("#homeBaseDescription").html("Welcome back to base.");
+    $("#homeBaseDescription").html("You flee in a cowardly, but stealthy fashion. Welcome back to base.");
 }
 function heroDeath() {
     hero.money = 0;
@@ -90,6 +90,8 @@ function updateHeroStats() {
     $("#health").html(hero.health.toString());
     $("#monstersKilled").html(hero.badGuysKilled.toString());
     $("#money").html("$ " + hero.money.toString());
+    $("#weapon").html("" + hero.weapon.name);
+    $("#weaponDescription").html("" + hero.weapon.description);
 }
 function hideAllPanels() {
     $("#characterCreation").hide();

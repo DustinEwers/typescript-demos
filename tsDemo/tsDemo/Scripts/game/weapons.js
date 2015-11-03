@@ -10,6 +10,7 @@ var Game;
         function Sword(_name, _description, _quality) {
             this.name = _name;
             this.description = _description;
+            this.quality = _quality;
         }
         Sword.prototype.getDamage = function () {
             var bonus = 0;

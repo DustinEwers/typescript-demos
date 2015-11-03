@@ -16,6 +16,7 @@
         constructor(_name: string, _description: string, _quality: SwordQuality) {
             this.name = _name;
             this.description = _description;
+            this.quality = _quality;
         }
 
         getDamage(): number {
