@@ -16,7 +16,7 @@ var notRequired = "blah"; // Types are implicit, just like C#
 // notRequired = true; // Won't compile
 
 var list: number[] = [1, 2, 3];
-// list = ["apple", "bananna"]; // Won't compile
+//list = ["apple", "bananna"]; // Won't compile
 
 // Enums
 enum Season { Summer, Winter, Fall, Spring };
@@ -41,7 +41,7 @@ class Animal {
     
     // method definition
     move(meters: number) {
-        console.log(this.name + " moved " + meters + "m.");
+        console.log(`${this.name} moved ${meters}m.`); // You can do string interpolation to simplify string creation. 
     }
 
     // constructor
@@ -90,12 +90,11 @@ class BlueJay extends Animal implements IAnimal {
     hasWings: boolean = true;
 }
 
-
 // 3. Modules
 // This feature makes it way easier to build big applications
 
 module StringValidation {
-    export interface StringValidator {
+    export interface IStringValidator {
         isAcceptable(s: string): boolean;
     }
 
@@ -103,13 +102,13 @@ module StringValidation {
     var numberRegexp = /^[0-9]+$/;
     var anRegexp = /^[A-Za-z0-9]+$/;
 
-    export class LettersOnlyValidation implements StringValidator {
+    export class LettersOnlyValidation implements IStringValidator {
         isAcceptable(s: string) {
             return lettersRegexp.test(s);
         }
     }
 
-    class ZipCodeValidator implements StringValidator {
+    class ZipCodeValidator implements IStringValidator {
         isAcceptable(s: string) {
             return s.length === 5 && numberRegexp.test(s);
         }
@@ -122,7 +121,7 @@ module StringValidation {
 
 var strings = ['Hello', '98052', '101', "!@#!@#"];
 // Validators to use
-var validators: { [s: string]: StringValidation.StringValidator; } = {};
+var validators: { [s: string]: StringValidation.IStringValidator; } = {};
 validators['Letters only'] = new StringValidation.LettersOnlyValidation();
 
 //validators['ZIP code'] = new StringValidation.ZipCodeValidator(); // Can't use this because it's not exported

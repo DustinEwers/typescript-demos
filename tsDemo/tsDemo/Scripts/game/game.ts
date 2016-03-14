@@ -1,8 +1,4 @@
-﻿/// <reference path="characters.ts" />
-/// <reference path="encounters.ts" />
-/// <reference path="../typings/jquery/jquery.d.ts" />
-
-var hero: Game.Hero;
+﻿var hero: Game.Hero;
 var currentMonster: Game.Monster;
 
 function beginGame() {

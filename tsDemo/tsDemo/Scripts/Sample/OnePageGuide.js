@@ -1,5 +1,3 @@
-// This is the single page guide to TypeScript
-// It doesn't include everything, but it does include the important stuff
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }

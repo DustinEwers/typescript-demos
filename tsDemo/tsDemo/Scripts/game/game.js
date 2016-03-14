@@ -1,6 +1,3 @@
-/// <reference path="characters.ts" />
-/// <reference path="encounters.ts" />
-/// <reference path="../typings/jquery/jquery.d.ts" />
 var hero;
 var currentMonster;
 function beginGame() {
