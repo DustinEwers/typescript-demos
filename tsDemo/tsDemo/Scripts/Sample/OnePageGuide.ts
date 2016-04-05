@@ -90,10 +90,9 @@ class BlueJay extends Animal implements IAnimal {
     hasWings: boolean = true;
 }
 
-// 3. Modules
-// This feature makes it way easier to build big applications
+// 3. Namepaces
 
-module StringValidation {
+namespace StringValidation {
     export interface IStringValidator {
         isAcceptable(s: string): boolean;
     }

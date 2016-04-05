@@ -3,8 +3,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var Game;
-(function (Game) {
+define(["require", "exports"], function (require, exports) {
     var Character = (function () {
         function Character() {
         }
@@ -16,7 +15,7 @@ var Game;
         };
         return Character;
     })();
-    Game.Character = Character;
+    exports.Character = Character;
     var Hero = (function (_super) {
         __extends(Hero, _super);
         function Hero() {
@@ -24,7 +23,7 @@ var Game;
         }
         return Hero;
     })(Character);
-    Game.Hero = Hero;
+    exports.Hero = Hero;
     var Monster = (function (_super) {
         __extends(Monster, _super);
         function Monster(_name, _health, _weapon) {
@@ -33,7 +32,7 @@ var Game;
             this.weapon = _weapon;
             this.health = _health();
         }
-        Monster.prototype.monsterDeath = function () {
+        Monster.prototype.reward = function () {
             return {
                 money: Math.floor((Math.random() * 10) * 2),
                 message: this.name + " dies a horrible death"
@@ -41,6 +40,6 @@ var Game;
         };
         return Monster;
     })(Character);
-    Game.Monster = Monster;
-})(Game || (Game = {}));
+    exports.Monster = Monster;
+});
 //# sourceMappingURL=characters.js.map

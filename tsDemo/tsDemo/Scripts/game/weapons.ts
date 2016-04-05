@@ -1,4 +1,4 @@
-﻿module Game {
+﻿
     export interface IWeapon {
         name: string;
         description: string;
@@ -81,4 +81,3 @@
             return `${this.name} slashes at the ${enemy}`;
         }
     }
-}

@@ -1,11 +1,10 @@
-var Game;
-(function (Game) {
+define(["require", "exports"], function (require, exports) {
     (function (SwordQuality) {
         SwordQuality[SwordQuality["Janky"] = 0] = "Janky";
         SwordQuality[SwordQuality["Decent"] = 1] = "Decent";
         SwordQuality[SwordQuality["Awesome"] = 2] = "Awesome";
-    })(Game.SwordQuality || (Game.SwordQuality = {}));
-    var SwordQuality = Game.SwordQuality;
+    })(exports.SwordQuality || (exports.SwordQuality = {}));
+    var SwordQuality = exports.SwordQuality;
     var Sword = (function () {
         function Sword(_name, _description, _quality) {
             this.name = _name;
@@ -32,7 +31,7 @@ var Game;
         };
         return Sword;
     })();
-    Game.Sword = Sword;
+    exports.Sword = Sword;
     var NinjaStar = (function () {
         function NinjaStar(_name, _description, _bonusDamage) {
             this.name = _name;
@@ -47,7 +46,7 @@ var Game;
         };
         return NinjaStar;
     })();
-    Game.NinjaStar = NinjaStar;
+    exports.NinjaStar = NinjaStar;
     var Claws = (function () {
         function Claws(damage) {
             this.name = "Claws";
@@ -62,6 +61,6 @@ var Game;
         };
         return Claws;
     })();
-    Game.Claws = Claws;
-})(Game || (Game = {}));
+    exports.Claws = Claws;
+});
 //# sourceMappingURL=weapons.js.map

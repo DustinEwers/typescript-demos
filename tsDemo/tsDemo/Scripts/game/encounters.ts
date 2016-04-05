@@ -1,5 +1,7 @@
-﻿module Game {
-    function getRandomRange(min:number, max:number):number {
+﻿import { Monster } from "./characters";
+import { Claws, Sword, SwordQuality } from "./weapons";
+
+    function getRandomRange(min: number, max: number): number {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
@@ -19,4 +21,3 @@
             }
         }
     }
-}

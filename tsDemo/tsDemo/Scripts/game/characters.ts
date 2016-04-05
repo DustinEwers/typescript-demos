@@ -1,4 +1,6 @@
-﻿module Game {
+﻿
+import { IWeapon } from "./weapons";
+
     export class Character {
         public health: number;
         public maxHealth: number;
@@ -29,11 +31,10 @@
             this.health = _health();
         }
 
-        monsterDeath(): any {
+        reward(): any {
             return {
                 money: Math.floor((Math.random() * 10) * 2),
                 message : `${this.name} dies a horrible death`
             };
         }
     }
-}
