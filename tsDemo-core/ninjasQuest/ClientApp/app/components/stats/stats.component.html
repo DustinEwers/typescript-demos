@@ -1,0 +1,25 @@
+﻿<div>
+    <h3>Ninja Stats</h3>
+    <p>
+        <span class="control-label">Name: </span>
+        <span id="name">{{hero.name}}</span>
+    </p>
+    <p>
+        <span class="control-label">Weapon: </span>
+        <em><span id="weapon">{{hero.weapon.name}}</span></em>
+        <br />
+        <span id="weaponDescription">{{hero.weapon.description}}</span>
+    </p>
+    <p>
+        <span class="control-label">Health: </span>
+        <span id="health">{{hero.health}} / {{hero.maxHealth}}</span>
+    </p>
+    <p>
+        <span class="control-label">Bad Guys killed: </span>
+        <span id="monstersKilled">{{hero.badGuysKilled}}</span>
+    </p>
+    <p>
+        <span class="control-label">Cash Money: </span>
+        <span id="money">{{hero.money | currency:'USD':true }}</span>
+    </p>
+</div>

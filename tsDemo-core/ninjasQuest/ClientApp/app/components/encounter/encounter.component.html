@@ -1,0 +1,23 @@
+﻿<div class="row">
+    <div class="col-md-8">
+        <h3>Fight!</h3>
+        <div *ngIf="actionMessage" class="alert alert-warning" role="alert">
+            <p>
+                {{actionMessage}}
+            </p>
+        </div>
+        <p>
+            <span class="control-label">Current Bad Guy: </span>
+            <span>{{monster.name}}</span>
+        </p>
+        <p>
+            <span class="control-label">Remaining Health: </span>
+            <span id="monsterHealth">{{monster.health}}</span>
+        </p>
+        <button type="button" class="btn btn-default" (click)="attack()">Attack</button>
+        <button type="button" class="btn btn-default"  (click)="runAway()" >Run Away</button>
+    </div>
+    <div class="col-md-4">
+        <stats></stats>
+    </div>
+</div>

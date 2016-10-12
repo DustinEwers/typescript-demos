@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-md-8">
+        <h3>Home Base</h3>
+        <p>
+            Your home base is a sweet ninja lair, filled with all the best ninja stuff. Also, excellent wi-fi.
+        </p>
+        <div *ngIf="message" class="alert alert-info" role="alert">
+            {{message}}
+        </div>
+        <br />
+        <button type="button" class="btn btn-default" (click)="takeNap()">Take a Nap</button>
+        <button type="button" class="btn btn-default" (click)="fightMonster()">Fight a Monster</button>
+    </div>
+    <div class="col-md-4">
+        <stats></stats>
+    </div>
+</div>
