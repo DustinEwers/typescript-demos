@@ -1,16 +1,18 @@
 {
-  "name": "Angular2Spa",
-  "version": "0.0.0",
+  "name": "ninjas-quest",
+  "version": "0.0.1",
+  "license": "MIT",
+  "repository": "https://github.com/DustinEwers/typescript-demos/tree/master/tsDemo-core",
   "dependencies": {
-    "@angular/common": "2.0.0",
-    "@angular/compiler": "2.0.0",
-    "@angular/core": "2.0.0",
-    "@angular/forms": "2.0.0",
-    "@angular/http": "2.0.0",
-    "@angular/platform-browser": "2.0.0",
-    "@angular/platform-browser-dynamic": "2.0.0",
-    "@angular/platform-server": "2.0.0",
-    "@angular/router": "3.0.0",
+    "@angular/common": "2.1.0",
+    "@angular/compiler": "2.1.0",
+    "@angular/core": "2.1.0",
+    "@angular/forms": "2.1.0",
+    "@angular/http": "2.1.0",
+    "@angular/platform-browser": "2.1.0",
+    "@angular/platform-browser-dynamic": "2.1.0",
+    "@angular/platform-server": "2.1.0",
+    "@angular/router": "3.1.0",
     "@types/node": "^6.0.38",
     "angular2-platform-node": "~2.0.10",
     "angular2-universal": "~2.0.10",
@@ -39,5 +41,8 @@
     "webpack-hot-middleware": "^2.10.0",
     "webpack-merge": "^0.14.1",
     "zone.js": "^0.6.21"
+  },
+  "devDependencies": {
+    "tslint-loader": "^2.1.5"
   }
 }

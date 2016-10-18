@@ -1,4 +1,4 @@
-﻿import { Component } from '@angular/core';
+﻿import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Hero, Monster } from "../../characters";
 import { MonsterFactory } from "../../encounters";
@@ -7,10 +7,10 @@ import { GameService } from "../../game.service";
 
 
 @Component({
-    selector: 'encounter',
+    selector: 'nq-encounter',
     template: require('./encounter.component.html')
 })
-export class EncounterComponent {
+export class EncounterComponent implements OnInit {
     hero: Hero;
     monster: Monster;
     actionMessage: string;

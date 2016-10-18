@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { GameService } from "../../game.service";
 
 @Component({
-    selector: 'character-builder',
+    selector: 'nq-character-builder',
     template: require('./characterbuilder.component.html')
 })
 export class CharacterBuilderComponent {

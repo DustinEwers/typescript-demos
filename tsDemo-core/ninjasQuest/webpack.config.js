@@ -13,6 +13,12 @@ var sharedConfig = {
         publicPath: '/dist/' // Webpack dev middleware, if enabled, handles requests for this URL prefix
     },
     module: {
+        preLoaders: [
+            {
+                test: /\.ts$/,
+                loader: "tslint"
+            }
+        ], 
         loaders: [
             { test: /\.ts$/, include: /ClientApp/, loader: 'ts', query: { silent: true } },
             { test: /\.html$/, loader: 'raw' },
