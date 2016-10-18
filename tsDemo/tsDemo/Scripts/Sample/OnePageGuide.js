@@ -3,7 +3,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var name = "Jane";
+var fName = "Jane";
 var likesBacon = true;
 var height = 5.5;
 var whoKnows = "wombat";
@@ -33,7 +33,7 @@ var Animal = (function () {
         console.log(this.name + " moved " + meters + "m.");
     };
     return Animal;
-})();
+}());
 var Squirrel = (function (_super) {
     __extends(Squirrel, _super);
     function Squirrel() {
@@ -51,7 +51,7 @@ var Squirrel = (function (_super) {
     });
     Squirrel.speciesName = "Sciuridae";
     return Squirrel;
-})(Animal);
+}(Animal));
 var bobTheSquirrel = new Squirrel("Bob");
 bobTheSquirrel.tailLength = 3;
 bobTheSquirrel.move(5);
@@ -64,7 +64,7 @@ var BlueJay = (function (_super) {
         this.hasWings = true;
     }
     return BlueJay;
-})(Animal);
+}(Animal));
 var StringValidation;
 (function (StringValidation) {
     var lettersRegexp = /^[A-Za-z]+$/;
@@ -77,7 +77,7 @@ var StringValidation;
             return lettersRegexp.test(s);
         };
         return LettersOnlyValidation;
-    })();
+    }());
     StringValidation.LettersOnlyValidation = LettersOnlyValidation;
     var ZipCodeValidator = (function () {
         function ZipCodeValidator() {
@@ -86,7 +86,7 @@ var StringValidation;
             return s.length === 5 && numberRegexp.test(s);
         };
         return ZipCodeValidator;
-    })();
+    }());
     function IsAlphaNumeric(s) {
         return anRegexp.test(s);
     }

@@ -4,7 +4,7 @@
 // 1.Types
 // Types are optional, but useful. 
 
-var name: string = "Jane";
+var fName: string = "Jane";
 var likesBacon: boolean = true;
 var height: number = 5.5;
 var whoKnows: any = "wombat"; // The any type is a catch all type
