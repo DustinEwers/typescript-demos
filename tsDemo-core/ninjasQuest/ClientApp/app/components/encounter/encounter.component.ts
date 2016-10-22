@@ -1,10 +1,7 @@
 ﻿import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Hero, Monster } from "../../characters";
-import { MonsterFactory } from "../../encounters";
-
+import { Hero, Monster, MonsterFactory } from "../../models/game";
 import { GameService } from "../../game.service";
-
 
 @Component({
     selector: 'nq-encounter',
@@ -53,7 +50,7 @@ export class EncounterComponent implements OnInit {
     }
 
     runAway(): void {
-        this.game.setMessage("You have bravely ran away");
+        this.game.setMessage("You bravely ran away");
         this.router.navigate(['/home']);
     }
 }

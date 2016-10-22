@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { Hero } from "../../characters";
-
 
 @Component({
     selector: 'app',

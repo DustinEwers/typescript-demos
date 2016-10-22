@@ -1,7 +1,6 @@
 ﻿import { Component, OnInit } from '@angular/core';
-import { Hero } from "../../characters";
+import { Hero } from "../../models/game";
 import { GameService } from "../../game.service";
-
 
 @Component({
     selector: "nq-stats",

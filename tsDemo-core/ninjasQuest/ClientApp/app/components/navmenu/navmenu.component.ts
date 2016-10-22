@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Hero } from "../../characters";
+import { Hero } from "../../models/game";
 
 @Component({
     selector: 'nq-nav-menu',

@@ -1,37 +1,34 @@
 ﻿import { Injectable } from '@angular/core';
-import { Hero } from './characters';
-import * as Weapon from './weapons';
-import { Dice } from './dice';
+import * as Game from './models/game';
 
 @Injectable()
 export class GameService {
-    private hero: Hero;
+    private hero: Game.Hero;
     private message: string;
-
-
+    
     createCharacter(name: string, weapon: string) {
-        this.hero = new Hero();
+        this.hero = new Game.Hero();
 
         this.hero.name = name;
-        this.hero.health = Dice.rollDice(10, 3, 2);
+        this.hero.health = Game.Dice.rollDice(10, 3, 2);
         this.hero.maxHealth = this.hero.health;
         this.hero.money = 0;
         this.hero.badGuysKilled = 0;
 
         switch (weapon) {
             case "sword":
-                this.hero.weapon = new Weapon.Sword("Generic Samaurai Sword", "A Generic Samaurai Sword", Weapon.SwordQuality.Decent);
+                this.hero.weapon = new Game.Sword("Generic Samaurai Sword", "A Generic Samaurai Sword", Game.SwordQuality.Decent);
                 break;
             case "ninja-star":
-                this.hero.weapon = new Weapon.NinjaStar("Ninja Stars", "They're quite pointy...", 1);
+                this.hero.weapon = new Game.NinjaStar("Ninja Stars", "They're quite pointy...", 1);
                 break;
             default:
-                this.hero.weapon = new Weapon.Sword("Vorpal Samaurai Sword", "A vorpal Samaurai Sword. It silently goes snicker-snack!", Weapon.SwordQuality.Awesome);
+                this.hero.weapon = new Game.Sword("Vorpal Samaurai Sword", "A vorpal Samaurai Sword. It silently goes snicker-snack!", Game.SwordQuality.Awesome);
                 break;
         }
     }
     
-    getHero(): Hero {
+    getHero(): Game.Hero {
         return this.hero;
     }
 
