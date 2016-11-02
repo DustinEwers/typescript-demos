@@ -1,0 +1,10 @@
+﻿
+$icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
+
+$font-family-sans-serif:  Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
+$font-family-serif:       Cambria, Georgia, serif;
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+$font-family-monospace:   Consolas, "Courier New", monospace;
+$font-family-base:        $font-family-sans-serif;
+
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
