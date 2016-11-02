@@ -3,8 +3,7 @@ import { Hero } from "../../models/game";
 
 @Component({
     selector: 'nq-nav-menu',
-    template: require('./navmenu.component.html'),
-    styles: [require('./navmenu.component.css')]
+    template: require('./navmenu.component.html')
 })
 export class NavMenuComponent {
 }
