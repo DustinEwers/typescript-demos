@@ -1,10 +1,3 @@
-# Welcome to ASP.NET Core
-
-We've made some big updates in this release, so it’s **important** that you spend a few minutes to learn what’s new.
-
-You've created a new ASP.NET Core project. [Learn what's new](https://go.microsoft.com/fwlink/?LinkId=518016)
-## Application Setup
-
 This application is based on the following template: 
 http://blog.stevensanderson.com/2016/10/04/angular2-template-for-visual-studio/
 
@@ -20,4 +13,4 @@ There are several pre-requisites to install to get this to work properly.
 -------
 Other tips: 
 
-If you update any third party depenencies or you are missing them, run "webpack --config webpack.config.vendor.js"
+npm run pack will build the config and app webpack bundles
