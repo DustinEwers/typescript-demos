@@ -4,6 +4,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 define(["require", "exports"], function (require, exports) {
+    "use strict";
     var Character = (function () {
         function Character() {
         }
@@ -14,7 +15,7 @@ define(["require", "exports"], function (require, exports) {
             return this.health <= 0;
         };
         return Character;
-    })();
+    }());
     exports.Character = Character;
     var Hero = (function (_super) {
         __extends(Hero, _super);
@@ -22,7 +23,7 @@ define(["require", "exports"], function (require, exports) {
             _super.apply(this, arguments);
         }
         return Hero;
-    })(Character);
+    }(Character));
     exports.Hero = Hero;
     var Monster = (function (_super) {
         __extends(Monster, _super);
@@ -39,7 +40,7 @@ define(["require", "exports"], function (require, exports) {
             };
         };
         return Monster;
-    })(Character);
+    }(Character));
     exports.Monster = Monster;
 });
 //# sourceMappingURL=characters.js.map

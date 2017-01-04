@@ -1,4 +1,5 @@
 define(["require", "exports", "./characters", "./weapons", "./encounters"], function (require, exports, characters_1, weapons_1, encounters_1) {
+    "use strict";
     function __export(m) {
         for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
     }

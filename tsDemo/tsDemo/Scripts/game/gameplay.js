@@ -1,4 +1,5 @@
 define(["require", "exports", "./game"], function (require, exports, Game) {
+    "use strict";
     var hero;
     var currentMonster;
     function beginGame() {
