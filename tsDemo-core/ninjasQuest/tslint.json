@@ -3,12 +3,8 @@
     "node_modules/codelyzer"
   ],
   "rules": {
-    "directive-selector-name": [ true, "camelCase" ],
-    "component-selector-name": [ true, "kebab-case" ],
-    "directive-selector-type": [ true, "attribute" ],
-    "component-selector-type": [ true, "element" ],
-    "directive-selector-prefix": [ true, "nq" ],
-    "component-selector-prefix": [ true, "nq" ],
+    "directive-selector": [true, "attribute", "nq", "camelCase"],
+    "component-selector": [true, "element", "nq", "kebab-case"],
     "use-input-property-decorator": true,
     "use-output-property-decorator": true,
     "use-host-property-decorator": true,
@@ -18,7 +14,7 @@
     "no-forward-ref": true,
     "use-life-cycle-interface": true,
     "use-pipe-transform-interface": true,
-    "pipe-naming": [ true, "camelCase", "sg" ],
+    "pipe-naming": [true, "camelCase", "nq"],
     "component-class-suffix": true,
     "directive-class-suffix": true,
     "import-destructuring-spacing": true,

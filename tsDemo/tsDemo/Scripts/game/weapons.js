@@ -1,4 +1,5 @@
 define(["require", "exports"], function (require, exports) {
+    "use strict";
     (function (SwordQuality) {
         SwordQuality[SwordQuality["Janky"] = 0] = "Janky";
         SwordQuality[SwordQuality["Decent"] = 1] = "Decent";
@@ -30,7 +31,7 @@ define(["require", "exports"], function (require, exports) {
             return this.name + " slashes at the " + enemy;
         };
         return Sword;
-    })();
+    }());
     exports.Sword = Sword;
     var NinjaStar = (function () {
         function NinjaStar(_name, _description, _bonusDamage) {
@@ -45,7 +46,7 @@ define(["require", "exports"], function (require, exports) {
             return this.name + " slashes at the " + enemy;
         };
         return NinjaStar;
-    })();
+    }());
     exports.NinjaStar = NinjaStar;
     var Claws = (function () {
         function Claws(damage) {
@@ -60,7 +61,7 @@ define(["require", "exports"], function (require, exports) {
             return this.name + " slashes at the " + enemy;
         };
         return Claws;
-    })();
+    }());
     exports.Claws = Claws;
 });
 //# sourceMappingURL=weapons.js.map
