@@ -1,0 +1,17 @@
+<md-grid-list cols="4">
+  <md-grid-tile [colspan]="3">
+        <h3>Home Base</h3>
+        <p>
+            Your home base is a sweet ninja lair, filled with all the best ninja stuff. Also, excellent wi-fi.
+        </p>
+        <div *ngIf="message" class="alert alert-info" role="alert">
+            {{message}}
+        </div>
+        <br />
+        <button md-raised-button (click)="takeNap()">Take a Nap</button>
+        <button md-raised-button (click)="fightMonster()">Fight a Monster</button>
+  </md-grid-tile>
+  <md-grid-tile [colspan]="1">
+      <app-stats></app-stats>
+  </md-grid-tile>
+</md-grid-list>

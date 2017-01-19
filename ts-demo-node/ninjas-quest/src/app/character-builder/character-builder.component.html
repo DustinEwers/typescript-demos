@@ -1,0 +1,22 @@
+<md-card class="example-card">
+  <md-card-header>
+    <div md-card-avatar class="example-header-image"></div>
+    <md-card-title>Make a Ninja</md-card-title>
+  </md-card-header>
+  <md-card-content>
+    <form>
+      <p>
+        <md-input-container>
+          <input md-input [(ngModel)]="name" name="name"  class="form-control" id="characterName" placeholder="Name Eg. Bob, Sally">
+        </md-input-container>
+      </p>
+      <p>
+        <md-select placeholder="Weapon" [(ngModel)]="weapon" name="weapon">
+            <md-option [value]="sword">Sword</md-option>
+            <md-option [value]="ninja-star">Ninja Stars</md-option>
+        </md-select>
+      </p>
+      <button md-raised-button (click)="buildCharacter()" class="btn btn-default">Submit</button>
+    </form>
+  </md-card-content>
+</md-card>

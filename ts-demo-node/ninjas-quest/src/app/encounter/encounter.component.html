@@ -1,0 +1,23 @@
+<md-grid-list cols="4">
+  <md-grid-tile [colspan]="3">
+        <h3>Fight!</h3>
+        <div *ngIf="actionMessage" class="alert alert-warning" role="alert">
+            <p>
+                {{actionMessage}}
+            </p>
+        </div>
+        <p>
+            <span class="control-label">Current Bad Guy: </span>
+            <span>{{monster.name}}</span>
+        </p>
+        <p>
+            <span class="control-label">Remaining Health: </span>
+            <span id="monsterHealth">{{monster.health}}</span>
+        </p>
+        <button md-raised-button (click)="attack()">Attack</button>
+        <button md-raised-button  (click)="runAway()" >Run Away</button>
+  </md-grid-tile>
+  <md-grid-tile [colspan]="1">
+      <app-stats></app-stats>
+  </md-grid-tile>
+</md-grid-list>
